@@ -7,6 +7,10 @@
     <meta name="description" content="<%= locals.description %>" />
     <meta name="keywords" content="<%= locals.keywords %>" />
     <meta name="author" content="<%= locals.author %>" />
+    <!-- since the css file is in the public folder, we can use it directly here. -->
+    <link rel="stylesheet" href="/css/style.css" />
+    <!-- adding javascript file from public folder -->
+    <script type="text/javascript" src="/js/script.js" defer></script>
   </head>
   <body>
     <%- body %>
