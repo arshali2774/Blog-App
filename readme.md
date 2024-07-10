@@ -40,4 +40,4 @@ Journal
 6. Layouts folder has a main.ejs file inside it.
 7. Added HTML to main.ejs file in layouts folder.
 8. Added `<%- body %>` to main.ejs file to render the body of the page.
-9.
+9. Added metadata to main.ejs file, using `locals` object in main.js file.
