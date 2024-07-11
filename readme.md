@@ -45,7 +45,6 @@ Journal
 11. Linked css and js files in main.ejs file.
 12. Created header and footer partials in partials folder.
 13. Included header and footer partials in main.ejs file.
-
 14. Made the search bar and added it to the layout.
 15. Completed all the styling and layout of the site.
 16. Added mongodb connection string to .env file.
@@ -53,3 +52,7 @@ Journal
 18. Added a db.js file inside config folder.
 19. Added a connectDB function inside db.js file.
 20. Invoking the connectDB function inside app.js file.
+
+21. Added models folder inside server folder.
+22. Created a post schema in post.js file inside models folder.
+23.
