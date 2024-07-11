@@ -8,9 +8,13 @@ import expressLayouts from 'express-ejs-layouts';
 
 // importing routes
 import router from './server/routes/main.js';
+import connectDB from './server/config/db.js';
 
 const app = express(); // creating express app
 const PORT = process.env.PORT || 3000; // creating port
+
+//connect to mongodb
+connectDB();
 
 app.use(express.static('public')); // serving static files
 
