@@ -43,3 +43,5 @@ Journal
 9. Added metadata to main.ejs file, using `locals` object in main.js file.
 10. Added css and js files to public folder.
 11. Linked css and js files in main.ejs file.
+12. Created header and footer partials in partials folder.
+13. Included header and footer partials in main.ejs file.
