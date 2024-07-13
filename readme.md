@@ -60,4 +60,6 @@ Journal
 26. Added pagination to the home page.
 27. Added route for individual post.
 28. Added post.ejs for individual post.
-29.
+29. Added middlewares like exppress.json and express.urlencoded.
+30. Added route for search.
+31. Created search.ejs for search page.

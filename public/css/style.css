@@ -151,6 +151,7 @@ img {
   font-size: 1rem;
   font-weight: 600;
   color: var(--black);
+  cursor: pointer;
 }
 
 .header__button button:hover {
@@ -329,6 +330,7 @@ img {
   right: 0;
   color: var(--gray-light);
   padding: 15px;
+  cursor: pointer;
 }
 
 .pagination {

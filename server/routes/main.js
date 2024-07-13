@@ -60,4 +60,32 @@ router.get('/post/:id', async (req, res) => {
   }
 });
 
+/* ------------------------- POST / Post - searchTerm ------------------------ */
+router.post('/search', async (req, res) => {
+  const locals = {
+    title: 'Search',
+    description: 'A blog app made with Node.js, Express, EJS, and MongoDB',
+    keywords: 'Arsh Ali Blog',
+    author: 'Arsh Ali',
+  };
+  try {
+    const searchTerm = req.body.searchTerm;
+    const searchNoSpecialChar = searchTerm.replace(/[^a-zA-Z0-9]/g, '');
+    const data = await Post.find({
+      $or: [
+        { title: { $regex: new RegExp(searchNoSpecialChar, 'i') } },
+        { body: { $regex: new RegExp(searchNoSpecialChar, 'i') } },
+      ],
+    });
+    res.render('search', {
+      locals,
+      searchTerm,
+      data,
+    });
+  } catch (error) {
+    // build error page
+    console.log(error);
+  }
+});
+
 export default router;

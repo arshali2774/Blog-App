@@ -16,6 +16,8 @@ const PORT = process.env.PORT || 3000; // creating port
 //connect to mongodb
 connectDB();
 
+app.use(express.json()); // parsing json
+app.use(express.urlencoded({ extended: true })); // parsing url encoded
 app.use(express.static('public')); // serving static files
 
 // templating engine
