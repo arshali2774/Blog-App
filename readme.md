@@ -54,6 +54,10 @@ Journal
 20. Invoking the connectDB function inside app.js file.
 21. Added models folder inside server folder.
 22. Created a post schema in post.js file inside models folder.
-
 23. Added a posts in the database.
 24. Getting the posts from the database to display on the home page.
+25. Rendering the posts on the home page.
+26. Added pagination to the home page.
+27. Added route for individual post.
+28. Added post.ejs for individual post.
+29.

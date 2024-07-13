@@ -28,12 +28,31 @@ router.get('', async (req, res) => {
     const count = await Post.countDocuments();
     const nextPage = parseInt(page) + 1;
     const hasNextPage = nextPage <= Math.ceil(count / perPage);
-
     res.render('index', {
       locals,
       posts: data,
       currentPage: page,
       nextPage: hasNextPage ? nextPage : null,
+    });
+  } catch (error) {
+    // build error page
+    console.log(error);
+  }
+});
+
+/* ----------------------------- GET / Post :id ----------------------------- */
+router.get('/post/:id', async (req, res) => {
+  try {
+    const post = await Post.findById(req.params.id);
+    const locals = {
+      title: post.title,
+      description: 'A blog app made with Node.js, Express, EJS, and MongoDB',
+      keywords: 'Arsh Ali Blog',
+      author: 'Arsh Ali',
+    };
+    res.render('post', {
+      locals,
+      post,
     });
   } catch (error) {
     // build error page
