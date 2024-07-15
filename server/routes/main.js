@@ -6,7 +6,7 @@ import Post from '../models/post.js';
 const router = express.Router();
 
 /* ------------------------------- GET / Home ------------------------------- */
-router.get('', async (req, res) => {
+router.get('/', async (req, res) => {
   const locals = {
     title: "Arsh's Blog",
     description: 'A blog app made with Node.js, Express, EJS, and MongoDB',
@@ -33,6 +33,7 @@ router.get('', async (req, res) => {
       posts: data,
       currentPage: page,
       nextPage: hasNextPage ? nextPage : null,
+      currentRoute: '/',
     });
   } catch (error) {
     // build error page
@@ -53,11 +54,40 @@ router.get('/post/:id', async (req, res) => {
     res.render('post', {
       locals,
       post,
+      currentRoute: `/post/${post._id}`,
     });
   } catch (error) {
     // build error page
     console.log(error);
   }
+});
+
+/* ------------------------------- GET / About ------------------------------ */
+router.get('/about', async (req, res) => {
+  const locals = {
+    title: 'About Arsh',
+    description: 'A blog app made with Node.js, Express, EJS, and MongoDB',
+    keywords: 'Arsh Ali Blog',
+    author: 'Arsh Ali',
+  };
+  res.render('about', {
+    locals,
+    currentRoute: '/about',
+  });
+});
+
+/* ------------------------------ GET / Contact ----------------------------- */
+router.get('/contact', async (req, res) => {
+  const locals = {
+    title: 'Contact',
+    description: 'A blog app made with Node.js, Express, EJS, and MongoDB',
+    keywords: 'Arsh Ali Blog',
+    author: 'Arsh Ali',
+  };
+  res.render('contact', {
+    locals,
+    currentRoute: '/contact',
+  });
 });
 
 /* ------------------------- POST / Post - searchTerm ------------------------ */

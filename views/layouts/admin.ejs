@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= locals.title %></title>
+    <meta name="description" content="<%= locals.description %>" />
+    <meta name="keywords" content="<%= locals.keywords %>" />
+    <meta name="author" content="<%= locals.author %>" />
+    <!-- since the css file is in the public folder, we can use it directly here. -->
+    <link rel="stylesheet" href="/css/style.css" />
+    <!-- adding javascript file from public folder -->
+    <script type="text/javascript" src="/js/script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <%- include('../partials/header_admin') %>
+      <main class="main"><%- body %></main>
+      <%- include('../partials/footer') %>
+    </div>
+  </body>
+</html>

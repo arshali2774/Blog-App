@@ -63,3 +63,26 @@ Journal
 29. Added middlewares like exppress.json and express.urlencoded.
 30. Added route for search.
 31. Created search.ejs for search page.
+32. Added javascript functionality for search bar to be opend and closed.
+
+33. Create admin folder in views directory and added index.ejs file inside it.
+34. Added a layout for admin page.
+35. Added a route for admin page in a separate file admin.js in routes folder.
+36. Added a route for admin page in app.js file.
+37. Created a user schema in user.js file inside models folder.
+38. Added a register route in admin.js file only to register a user i.e. me.
+39. Added session and cookie functionality in app.js file.
+40. Added login functionality in admin.js file.
+41. Added dashboard route in admin.js file.
+42. Added dashboard.ejs file in admin folder.
+43. Added edit-post route in admin.js file.
+44. Added edit-post.ejs file in admin folder.
+45. Added add-post route in admin.js file.
+46. Added add-post.ejs file in admin folder.
+47. Added delete-post route in admin.js file.
+48. Added method-override package in app.js file.
+49. Added logout route in admin.js file.
+50. Added helper folder in server directory.
+51. Added routeHelper.js file inside helper folder.
+52. Added contact.ejs file in views folder.
+53. Added contact route in routes.js file.
